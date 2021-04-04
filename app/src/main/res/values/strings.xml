@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Spelling_bee</string>
+    <drawable name="clr_normal">#FFFAFAFA</drawable>
+    <drawable name="clr_pressed">#ffffff</drawable>
+</resources>
