@@ -1,3 +1,9 @@
+/**
+ * An activity for create an new user
+ * Author : HUANG Hongjun && YUAN Mengcheng
+ * ISE-OC
+ * ESIGELEC
+ */
 package com.example.spelling_bee;
 
 import androidx.appcompat.app.AlertDialog;

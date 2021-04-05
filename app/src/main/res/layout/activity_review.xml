@@ -6,4 +6,101 @@
     android:layout_height="match_parent"
     tools:context=".Review">
 
+    <ImageButton
+        android:id="@+id/wordBank2"
+        android:layout_width="78dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="false"
+        android:background="@xml/button_select"
+        android:contentDescription="TODO"
+        android:onClick="checkButtonClicked"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/review_meaning"
+        app:layout_constraintTop_toBottomOf="@+id/review_meaning"
+        app:srcCompat="@drawable/beee" />
+
+    <ImageButton
+        android:id="@+id/wordBank3"
+        android:layout_width="78dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:adjustViewBounds="false"
+        android:background="@xml/button_select"
+        android:contentDescription="TODO"
+        android:onClick="helpButtonClicked"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/wordBank2"
+        app:layout_constraintStart_toStartOf="@+id/wordBank2"
+        app:layout_constraintTop_toBottomOf="@+id/wordBank2"
+        app:srcCompat="@drawable/beee" />
+
+    <ImageButton
+        android:id="@+id/wordBank4"
+        android:layout_width="78dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:adjustViewBounds="false"
+        android:background="@xml/button_select"
+        android:contentDescription="TODO"
+        android:onClick="nextButtonClicked"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/wordBank3"
+        app:layout_constraintStart_toStartOf="@+id/wordBank3"
+        app:layout_constraintTop_toBottomOf="@+id/wordBank3"
+        app:srcCompat="@drawable/beee" />
+
+    <TextView
+        android:id="@+id/review_meaning"
+        android:layout_width="240dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="68dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/review_spelling"
+        app:layout_constraintStart_toStartOf="@+id/review_spelling"
+        app:layout_constraintTop_toBottomOf="@+id/review_spelling" />
+
+    <EditText
+        android:id="@+id/review_spelling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Spelling"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:text="Check"
+        app:layout_constraintBottom_toBottomOf="@+id/wordBank2"
+        app:layout_constraintEnd_toStartOf="@+id/wordBank2"
+        app:layout_constraintTop_toTopOf="@+id/wordBank2" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        app:layout_constraintBottom_toBottomOf="@+id/wordBank3"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/wordBank3" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="@+id/wordBank4"
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="@+id/wordBank4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

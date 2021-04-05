@@ -1,3 +1,10 @@
+/**
+ * A class of all the words of one user
+ * different user has different vocabulary list
+ * ISE-OC
+ * Author : HUANG Hongjun && YUAN Mengcheng
+ * ESIGELEC
+ */
 package com.example.spelling_bee;
 
 import android.content.Context;
@@ -44,6 +51,11 @@ public class VocabList {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    public void clearData(){
+        vocabList = new ArrayList<>();
     }
 
     public void loadContactsFromFile(Context context){

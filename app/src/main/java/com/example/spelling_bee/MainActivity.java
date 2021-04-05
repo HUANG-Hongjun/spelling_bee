@@ -1,3 +1,10 @@
+/**
+ * Log in activity
+ * if the login with successful, can go to user menu
+ * Author : HUANG Hongjun && YUAN Mengcheng
+ * ISE-OC
+ * ESIGELEC
+ */
 package com.example.spelling_bee;
 
 import androidx.appcompat.app.AppCompatActivity;

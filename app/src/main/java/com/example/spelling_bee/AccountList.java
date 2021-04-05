@@ -1,3 +1,9 @@
+/**
+ * A class of all the users
+ * Author : HUANG Hongjun && YUAN Mengcheng
+ * ISE-OC
+ * ESIGELEC
+ */
 package com.example.spelling_bee;
 
 import android.app.Application;

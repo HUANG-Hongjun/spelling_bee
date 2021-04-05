@@ -1,3 +1,10 @@
+/**
+ * A class of one word
+ * include spelling, meaning and user
+ * Author : HUANG Hongjun && YUAN Mengcheng
+ * ISE-OC
+ * ESIGELEC
+ */
 package com.example.spelling_bee;
 
 public class Vocabulary {

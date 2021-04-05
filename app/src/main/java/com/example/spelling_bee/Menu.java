@@ -1,3 +1,10 @@
+/**
+ * Menu activity
+ * can go to word bank, review, or log out (back to the login activity)
+ * Author : HUANG Hongjun && YUAN Mengcheng
+ * ISE-OC
+ * ESIGELEC
+ */
 package com.example.spelling_bee;
 
 import androidx.appcompat.app.AlertDialog;
@@ -20,10 +27,12 @@ public class Menu extends AppCompatActivity {
             user_name=extras.getString("userName");
             setTitle("Hello, "+user_name);
         }
+        VocabList.getInstance().loadContactsFromFile(Menu.this);
 
     }
 
     public void logOutButtonClicked(View view){
+        //ask if the user is sure to quit
         AlertDialog.Builder builder = new AlertDialog.Builder(Menu.this);
         builder.setTitle(android.R.string.dialog_alert_title);
         builder.setMessage("Are you sure to log out?");
@@ -41,11 +50,18 @@ public class Menu extends AppCompatActivity {
         dialog.show();
     }
 
-    public void addButtonClicked(View view){
-        Intent intent = new Intent(Menu.this, Add_vocabularies.class);
+    //gp to word bank activity
+    public void wordBankButtonClicked(View view){
+        Intent intent = new Intent(Menu.this, WordBank.class);
         intent.putExtra("user_name",user_name);
         startActivity(intent);
+    }
 
+    //go to review activity
+    public void reviewButtonClicked(View view){
+        Intent intent = new Intent(Menu.this, Review.class);
+        intent.putExtra("user_name",user_name);
+        startActivity(intent);
     }
 
 

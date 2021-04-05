@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Spelling_bee">
-        <activity android:name=".Review"></activity>
-        <activity android:name=".Add_vocabularies" />
+        <activity android:name=".WordBank"></activity>
+        <activity android:name=".Review" />
+        <activity android:name=".Update_vocabularies" />
         <activity android:name=".Menu" />
         <activity android:name=".Create_account" />
 
