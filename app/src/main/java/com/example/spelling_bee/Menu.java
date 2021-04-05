@@ -14,9 +14,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class Menu extends AppCompatActivity {
     String user_name;
+    private ArrayList<Vocabulary> userWordList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +28,7 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         Bundle extras = getIntent().getExtras();
         if(extras != null){
-            user_name=extras.getString("userName");
+            user_name=extras.getString("user_name");
             setTitle("Hello, "+user_name);
         }
         VocabList.getInstance().loadContactsFromFile(Menu.this);
@@ -41,6 +45,7 @@ public class Menu extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        VocabList.getInstance().clearData();
                         Intent intent = new Intent(Menu.this,MainActivity.class);
                         intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
@@ -59,9 +64,27 @@ public class Menu extends AppCompatActivity {
 
     //go to review activity
     public void reviewButtonClicked(View view){
-        Intent intent = new Intent(Menu.this, Review.class);
-        intent.putExtra("user_name",user_name);
-        startActivity(intent);
+        loadUserWord();
+        if(userWordList.size()!=0){
+            Intent intent = new Intent(Menu.this, Review.class);
+            intent.putExtra("user_name",user_name);
+            startActivity(intent);
+        }
+        else{
+            Toast.makeText(Menu.this, "No vocabulary for you to review!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    //get all the words that belongs to this user
+    public void loadUserWord(){
+        int i;
+        userWordList = new ArrayList<>();
+        for(i=0;i<VocabList.getInstance().vocabList.size();i++){
+            if(user_name.equals(VocabList.getInstance().vocabList.get(i).getUser_name())){
+                userWordList.add(VocabList.getInstance().vocabList.get(i));
+            }
+        }
     }
 
 

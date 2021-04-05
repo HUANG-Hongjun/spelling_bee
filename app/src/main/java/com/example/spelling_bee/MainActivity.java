@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         if(idExist&&passwordRight){
             Intent intent = new Intent(
                     MainActivity.this, Menu.class);
-            intent.putExtra("userName",name);
+            intent.putExtra("user_name",name);
             startActivity(intent);
         }
         //no account
